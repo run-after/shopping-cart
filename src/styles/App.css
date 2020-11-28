@@ -1,0 +1,66 @@
+h1 {
+  font-size: 50px;
+}
+
+.App {
+  text-align: center;
+}
+
+.nav-bar {
+  background: rgb(121, 121, 121);
+  color: white;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-links > * {
+  padding: 5px;
+  color: white;
+  text-decoration: none;
+}
+
+li:hover {
+  opacity: 0.5;
+}
+
+.cart {
+  background: rgba(121, 121, 121, 0.75);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.checkout {
+  margin: 5px 20px;
+}
+
+.store {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 75%;
+  margin: 10px auto;
+}
+
+.item-card {
+  height: 200px;
+  width: 150px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.item-card input {
+  width: 75%;
+  align-self: center;
+}
+
+.item-card img {
+  height: 100px;
+}

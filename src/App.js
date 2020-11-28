@@ -1,8 +1,8 @@
-import './reset.css'
-import './App.css';
-import Home from './Home';
-import Shop from './Shop';
-import Nav from './Nav';
+import './styles/reset.css'
+import './styles/App.css';
+import Home from './components/Home';
+import Shop from './components/Shop';
+import Nav from './components/Nav';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';;
 
 function App() {
