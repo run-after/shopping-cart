@@ -4,9 +4,8 @@ import { Link } from 'react-router-dom';
 const Shop = (props) => {
   return (
     <div>
-      <div className='cart'>
-        <Link to={{pathname: '/cart', cart: props.cart}}>Items: {props.cartQty}</Link>
-        <button onClick={()=> alert('This is where we would take you to the checkout screen') }className='checkout'>Checkout</button>
+      <div className='cart-banner'>
+        <Link to={{pathname: '/cart', cart: props.cart}}><button className='checkout-btn'>&#128722;{props.cartQty}</button></Link>
       </div>
       <h1>Shop</h1>
       <div className='store'>

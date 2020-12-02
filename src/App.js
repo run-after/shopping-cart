@@ -37,8 +37,9 @@ function App() {
 
   const addToCart = (e) => {
     const itemID = e.target.parentNode.parentNode.id;
+    
     // Number from input
-    const number = Number(e.target.parentNode.firstChild.value);
+    const quantity = Number(e.target.parentNode.firstChild.value);
     if (!(items[itemID].name in cart)) {
       setCart(prevState => ({
         ...prevState,
@@ -46,14 +47,14 @@ function App() {
           name: items[itemID].name,
           pic: items[itemID].pic,
           cost: items[itemID].cost,
-          qty: number
+          qty: quantity
         }
       }));  
     } else {
-      cart[items[itemID].name].qty += number;
+      cart[items[itemID].name].qty += quantity;
     };
 
-    setCartQty(cartQty + number);
+    setCartQty(cartQty + quantity);
     
     e.target.parentNode.firstChild.value = 1;
   };
@@ -73,7 +74,15 @@ function App() {
                 addToCart={addToCart}
               />}
           />
-          <Route path='/cart' component={Cart} />
+          <Route path='/cart'
+            render={(props) =>
+              <Cart {...props}
+                items={items}
+                cart={cart}
+                cartQty={cartQty}
+                addToCart={addToCart}
+              />}
+          />
         </Switch>
       </BrowserRouter>
     </div>

@@ -25,15 +25,11 @@ li:hover {
   opacity: 0.5;
 }
 
-.cart {
+.cart-banner {
   background: rgba(121, 121, 121, 0.75);
   display: flex;
   justify-content: flex-end;
   align-items: center;
-}
-
-.checkout {
-  margin: 5px 20px;
 }
 
 .store {
@@ -43,6 +39,19 @@ li:hover {
   justify-content: center;
   width: 75%;
   margin: 10px auto;
+}
+
+.checkout-btn {
+  margin: 5px 20px;
+  background: rgba(0, 0, 0, 0);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.checkout-btn:hover {
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .item-card {
@@ -63,4 +72,13 @@ li:hover {
 
 .item-card img {
   height: 100px;
+}
+
+.cart {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 75%;
+  margin: 10px auto;
 }
